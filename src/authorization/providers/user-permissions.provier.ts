@@ -1,10 +1,7 @@
-import {
-  PermissionKey,
-  UserPermissionsFn,
-  RequiredPermissions,
-} from '../authorization';
-import {intersection} from 'lodash';
 import {Provider} from '@loopback/context';
+import {PermissionKey} from '../permission-key';
+import {UserPermissionsFn, RequiredPermissions} from '../types';
+import {intersection} from 'lodash';
 
 export class UserPermissionsProvider implements Provider<UserPermissionsFn> {
   constructor() {}
