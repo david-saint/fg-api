@@ -51,7 +51,7 @@ export class JWTStrategy implements AuthenticationStrategy{
       throw new HttpErrors.Unauthorized(
         `Authorization header value has too many parts. It must follow the pattern: 'Bearer xx.yy.zz' where xx.yy.zz is a valid JWT token.`,
       );
-      const token = parts[1];
-      return token;
+    const token = parts[1];
+    return token;
   }
 }
